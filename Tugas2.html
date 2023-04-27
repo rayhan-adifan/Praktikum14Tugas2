@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <style type="text/css">
+        #kotak{
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            border: solid 2px black;
+        }
+    </style>
+<body>
+    <h1>Tugas 2 Javascript</h1>
+    <div id="kotak"></div>
+        <script type="text/javascript">
+            setInterval((function(images) {
+                var index = -1, changeImages;
+                changeImages = function(){
+                    index = (index+1) % images.length;
+                    document.getElementById('kotak').style.backgroundImage='url('+images[index]
+                };
+                changeImages();
+                return changeImages;
+            }([
+                'gbr1.png', 'gbr2.png', 'gbr3.png', 'gbr4.png','gbr5.png'
+            ])), 4000); 
+        </script>
+</body>
+</html>
